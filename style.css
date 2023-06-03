@@ -1,0 +1,951 @@
+:root {
+  --main: #574023;
+  --background: #d4b895;
+}
+
+*, 
+*::before, 
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #94754e 0%,
+    #cea574 50%,
+    var(--background) 100%
+  );
+  background-color: var(--background);
+  color: #574023;
+}
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 7%;
+  background: linear-gradient(to right, var(--main) 0%, var(--background) 20%, #c59f70 50%, #a38765 100%);
+  border-bottom: 2px solid black;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .logo-img img{
+  width: 130px;
+  margin-top: -3rem;
+  margin-bottom: -3.6rem;
+}
+
+.navbar .navbar-nav a {
+  color: #ebebcf;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: black;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--main);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: var(--main);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: white;
+}
+
+#hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translate(0, -50%);
+}
+
+.info h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: black;
+  background: white;
+  margin: 0;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("image/header-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: -2.9rem;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 3.5em;
+  color: var(--background);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.3;
+}
+
+.hero .content h1 span {
+  color: white;
+}
+
+.hero .content p {
+  color: whitesmoke;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.3;
+  font-weight: 350;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: var(--main);
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content:hover .cta {
+  background: black;
+  color: wheat;
+  transition: 0.5s;
+}
+
+/* Swiper for Popular Shoes */
+::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #797979;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222224;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 124rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 3rem;
+  color: black;
+  padding: 4rem 1rem;
+  margin-bottom: -4rem;
+}
+
+.section-heading1 {
+  font-size: 1rem;
+  color: var(--main);
+  padding: 2rem -10rem;
+  margin-top: 1rem;
+}
+
+
+#tranding {
+  padding: 4rem 0;
+}
+
+#tranding .tranding-slider {
+  height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.tranding-slide {
+  width: 37rem;
+  height: 42rem;
+  position: relative;
+}
+
+.tranding-slide .tranding-slide-img img{
+  width: 37rem;
+  height: 42rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.tranding-slide .tranding-slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tranding-slide-content .shoes-price {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: black;
+}
+
+.tranding-slide-content .tranding-slide-content-bottom {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--main);
+}
+
+.shoes-rating {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.rating ion-icon {
+  color: var(--background);
+}
+
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.tranding-slider-control {
+  position: relative;
+  top: 1rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tranding-slider-control .swiper-pagination {
+  position: relative;
+  width: 15rem;
+  bottom: 1rem;
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: pink;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(
+    to bottom,
+    var(--background) 0%,
+    rgb(170, 125, 94) 50%,
+    var(--main) 100%
+  );
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: wheat;
+  margin: 1rem;
+}
+
+footer .socials a:hover {
+  color: black;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a:hover {
+  color: var(--background);
+}
+
+footer .links a {
+  color: var(--main);
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+  font-weight: 250;
+}
+
+.about,
+.shoes,
+.events,
+.subscribe {
+  padding: 5rem 7% 1.4rem;
+}
+
+.about h1,
+.shoes h1,
+.events h1, 
+.subscribe h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.about h1 span,
+.shoes h1 span,
+.events h1 span,
+.subscribe h1 span {
+  color: wheat;
+}
+
+/* About Us Section */
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about .logo-img img{
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -3rem;
+}
+
+.about .company .profile h3 {
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  margin-top: -4.5rem;
+  margin-bottom: 5.5rem;
+}
+
+.about .company .profile a {
+  color: var(--main);
+}
+
+.about-img {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 0.1rem;
+}
+
+.about .row .content h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.about .row .content p {
+  text-align: justify;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* Shoes Section */
+.shoes h2,
+.subscribe h2{
+  margin-bottom: 1rem;
+}
+
+.shoes p, 
+.subscribe p {
+  text-align: center;
+  max-width: 80rem;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.shoes .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.shoes .row .shoes-list {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 3rem;
+  border: 2px solid var(--main);
+  margin: 0.7rem 1.7rem;
+}
+
+.shoes .row .shoes-list img {
+  border-radius: 50%;
+  width: 80%;
+  margin-top: 1.5rem;
+}
+
+.shoes .row .shoes-list .shoes-list-title {
+  font-size: 2.2rem;
+  margin: 1.5rem auto 0.5rem;
+}
+
+.shoes .row .shoes-list .shoes-list-price {
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Events Section */
+.events .leftBox {
+  max-width: 80%;
+  height: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+.events .leftBox .content {
+  color: antiquewhite;
+  background: #c59f70;
+  padding: 3rem;
+  transition: 0.5s;
+}
+
+.events .leftBox .content:hover {
+  background: rgba(1, 1, 3, 0.39);
+}
+
+.events .leftBox .content h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: var(--main);
+}
+
+.events .leftBox .content p {
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.events .events-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 7% 2rem;
+  box-sizing: border-box;
+}
+
+.events .events-row .ul {
+  flex: 1 1 35rem;
+  padding: 0 0.1rem;
+}
+
+.events .events-row .content {
+  flex: 1 1 35rem;
+  display: flex;
+}
+
+.events .events-row .content ul li {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.events .events-row .content p {
+  text-align: justify;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.events .events-row ul li {
+  display: flex;
+  align-items: center;
+}
+
+.events .events-row ul li .time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  background: white;
+  box-sizing: border-box;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  transition: 0.5s;
+  position: relative;
+  z-index: -1;
+}
+
+.events .events-row ul li .time h3 {
+  margin: 0;
+  margin-top: 1rem;
+  padding: 1.5rem 3rem;
+  height: 100%;
+  color: var(--main);
+  font-size: 3.5rem;
+  line-height: 2.5rem;
+  top: auto;
+  left: auto;
+  transform: none;
+  display: flex;
+  flex-direction: column;
+  align-items: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.events .events-row ul li .time h3 span {
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  color: var(--background);
+}
+
+.events .events-row ul li .details {
+  padding: 2rem;
+  margin-bottom: 4rem;
+  background: wheat;
+  box-sizing: border-box;
+  width: 80%;
+  height: 100%;
+}
+
+.events .events-row ul li .details h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.events .events-row ul li .details h5 {
+  margin: 0;
+  margin-right: 2rem;
+  padding: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  border: 2px solid palevioletred;
+  background-color: white;
+  text-align: center;
+}
+
+.events .events-row ul li .details h5 span {
+  margin: 0;
+  margin-left: 2rem;
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.events .events-row ul li .details h6 {
+  margin: 0;
+  margin-right: 2rem;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(165, 56, 165);
+}
+
+.events .events-row ul li .details p {
+  margin: 0.1rem 0 0;
+  padding: 0;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+/* Subscribe */
+.subscribe .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #a38765;
+}
+
+.subscribe .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.subscribe .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.subscribe .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--background);
+  border: 1px solid black;
+  padding-left: 2rem;
+}
+
+.subscribe .row form .input-group input,
+.subscribe .row form .input-group select {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.5rem;
+  background: none;
+  color: var(--main);
+  margin-right: 2rem;
+}
+
+.subscribe .row form .input-group1 {
+  margin-top: 2rem;
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.subscribe .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: wheat;
+  background-color: var(--main);
+  cursor: pointer;
+}
+
+/* Modal Box for View Details*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-container {
+  position: relative;
+  background-color: white;
+  color: black;
+  margin: 10% auto;
+  padding: 1.3rem;
+  border: 1px solid black;
+  width: 80%;
+  animation: animateModal 0.5s;
+}
+
+/* Animation */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-container .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content img {
+  height: 25rem;
+  width: 45%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  #tranding {
+    padding: 5rem 1rem;
+  }
+
+  #tranding .tranding-slider {
+    height: 45rem;
+  }
+
+  #tranding .tranding-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  
+  .tranding-slide .tranding-slide-img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+
+  .tranding-slide .tranding-slide-img img{
+    margin-left: -5rem;
+  }
+
+  .tranding-slide-content .shoes-price {
+    position: absolute;
+    top: 2rem;
+    right: -2rem;
+    color: black;
+  }
+
+  .tranding-slide-content .tranding-slide-content-bottom {
+    bottom: -3rem;
+    left: -3rem;
+  }
+  
+  .tranding-slider-control {
+    position: relative;
+    top: 2rem;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 102%;
+    right: 0;
+    background: linear-gradient(
+    to bottom,
+    var(--background) 0%,
+    rgb(170, 125, 94) 50%,
+    var(--main) 100%
+  );
+    width: 30rem;
+    height: 100vh;
+    z-index: 9999;
+    overflow: hidden;
+    display: none;
+    transition: 0.5s;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--main);
+    display: block; /* supaya turun ke bawah */
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .navbar .navbar-nav.active {
+    display: block;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 28rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h2 {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .subscribe .row {
+    flex-wrap: wrap;
+  }
+
+  .subscribe .row .map {
+    height: 30rem;
+  }
+
+  .subscribe .row form {
+    padding-top: 0;
+  }
+
+  .modal-content {
+    flex-wrap: wrap;
+  }
+
+  .modal-content img {
+    margin: auto;
+    width: 55%;
+  }
+
+  .modal-content h2 {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .modal-content p {
+    text-align: justify;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 450px) {
+  html {
+    font-size: 45%;
+  }
+  
+  #tranding .tranding-slider {
+    height: 42rem;
+  }
+
+  #tranding .tranding-slide {
+    width: 20rem !important;
+    height: 28rem !important;
+  }
+  
+  .tranding-slide .tranding-slide-img {
+    width: 20rem !important;
+    height: 28rem !important;
+  }
+
+  .tranding-slide .tranding-slide-img img{
+    margin-left: -6rem;
+    width: 30rem;
+    height: 32rem;
+    border-radius: 1.5rem;
+  }
+
+  .tranding-slide-content .shoes-price {
+    position: absolute;
+    top: 1.5rem;
+    right: -1.5rem;
+    color: black;
+  }
+
+  .tranding-slide-content .tranding-slide-content-bottom {
+    bottom: -3rem;
+    left: -4rem;
+  }
+
+  .tranding-slider-control {
+    position: relative;
+    top: 2rem;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tranding-slider-container {
+    overflow: visible;
+  }
+}

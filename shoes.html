@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoes</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+    rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <div class="logo-img">
+            <img src="image/logo.png" alt="Logo">
+        </div>
+        <div class="navbar-nav">
+            <a href="index.html">Home</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="about.html">About Us</a>
+            <a href="events.html">Events</a>
+            <a href="subscribe.html">Subscribe</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Shoes Section -->
+    <section id="shoes" class="shoes">
+        <h1>Our <span>Products</span></h1>
+        <p> Experience the epitome of style and quality with our handmade leather men's shoes, 
+            <br> meticulously crafted by skilled artisans to elevate your footwear game and leave a lasting impression.</p>
+    <div class="row">
+        <div class="shoes-list">
+            <img src="image/shoes/boots.png" alt="Brogue-Boots" class="shoes-list-image">
+            <h2 class="shoes-list-title">Brogue</h2>
+            <p class="shoes-list-price">Rp429.000</p>
+            <a href="#" class="view-more" onclick="openModal()">View More</a>
+        </div>
+        <div class="shoes-list">
+            <img src="image/shoes/loafer.png" alt="Loafer-Dress Shoes" class="shoes-list-image">
+            <h2 class="shoes-list-title">Loafer</h2>
+            <p class="shoes-list-price">Rp289.000</p>
+        </div>
+        <div class="shoes-list">
+            <img src="image/shoes/derby.png" alt="Derby-Dress Shoes" class="shoes-list-image">
+            <h2 class="shoes-list-title">Derby</h2>
+            <p class="shoes-list-price">Rp369.000</p>
+        </div>
+        <div class="shoes-list">
+            <img src="image/shoes/chelsea.png" alt="Chelsea-Boots" class="shoes-list-image">
+            <h2 class="shoes-list-title">Chelsea</h2>
+            <p class="shoes-list-price">Rp329.000</p>
+        </div>
+        <div class="shoes-list">
+            <img src="image/shoes/oxford.png" alt="Oxford-Dress Shoes" class="shoes-list-image">
+            <h2 class="shoes-list-title">Oxford</h2>
+            <p class="shoes-list-price">Rp359.000</p>
+        </div>
+        <div class="shoes-list">
+            <img src="image/shoes/sneakers.png" alt="Sneakers-Casual Shoes" class="shoes-list-image">
+            <h2 class="shoes-list-title">Sneakers</h2>
+            <p class="shoes-list-price">Rp319.000</p>
+        </div>
+        <div class="shoes-list">
+            <img src="image/shoes/sandals.png" alt="Sandals-Casual Shoes" class="shoes-list-image">
+            <h2 class="shoes-list-title">Sandals</h2>
+            <p class="shoes-list-price">Rp229.000</p>
+        </div>
+    </div>
+    </section>
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+
+    <!-- footer -->
+    <footer>
+        <div class="socials">
+            <a href="https://www.instagram.com/"><i data-feather="instagram"></i></a>
+            <a href="https://twitter.com/"><i data-feather="twitter"></i></a>
+            <a href="https://www.facebook.com/"><i data-feather="facebook"></i></a>
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="about.html">About Us</a>
+            <a href="events.html">Events</a>
+            <a href="subscribe.html">Subscribe</a>
+        </div>
+        <div class="credit">
+            <p>Copyright &copy; 2023. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Box Item Detail -->
+    <div class="modal" id="item-detail-modal">
+        <div class="modal-container">
+            <a href="#" class="close-icon"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="image/shoes/boots.png" alt="Chelsea Boots">
+                <div class="product-content">
+                    <h2>Chelsea Boots</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium laborum soluta ullam ad officiis asperiores!</p>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <!-- Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+  </body>
+</html>
