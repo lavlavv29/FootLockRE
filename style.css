@@ -17,6 +17,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  margin-top: 9rem;
   background: linear-gradient(
     to bottom,
     #94754e 0%,
@@ -35,7 +36,7 @@ body {
   padding: 1.5rem 7%;
   background: linear-gradient(to right, var(--main) 0%, var(--background) 20%, #c59f70 50%, #a38765 100%);
   border-bottom: 2px solid black;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -74,28 +75,105 @@ body {
 
 .navbar .navbar-extra a {
   color: var(--main);
-  margin: 0 0.5rem;
+  margin: 0 1.5rem;
 }
 
 .navbar .navbar-extra a:hover {
   color: white;
 }
 
+/* Navbar Search Form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  margin-top: 0.18rem;
+  background-color: wheat;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+  transition: 0.3s;
+}
+
+.navbar .search-form input {
+  background-color: wheat;
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--main);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--main);
+}
+
+/* Navbar Shopping Cart */
+.shopping-cart {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  width: 35rem;
+  height: 100vh;
+  padding: 0 1.5rem;
+  background-color: white;
+  color: var(--primary);
+  transition: 0.3s linear;
+}
+
+.shopping-cart.active {
+  right: 0;
+}
+
+.shopping-cart .cart-item {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed black;
+}
+
+.shopping-cart img {
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.shopping-cart h3 {
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
+}
+
+.shopping-cart .item-price {
+  font-size: 1.2rem;
+}
+
+.shopping-cart .remove-item {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.shopping-cart .remove-item:hover {
+  color: var(--background);
+}
+
 #hamburger-menu {
   display: none;
   position: absolute;
   top: 50%;
-  right: 7%;
   transform: translate(0, -50%);
-}
-
-.info h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: black;
-  background: white;
-  margin: 0;
-  text-align: center;
 }
 
 /* Hero Section */
@@ -108,6 +186,7 @@ body {
   background-size: cover;
   background-position: center;
   margin-bottom: -2.9rem;
+  margin-top: -1.2rem;
 }
 
 .hero .content {
@@ -135,7 +214,8 @@ body {
   font-weight: 350;
 }
 
-.hero .content .cta {
+.hero .content .cta,
+.events .leftBox .content .cta {
   margin-top: 1rem;
   display: inline-block;
   padding: 1rem 3rem;
@@ -146,8 +226,9 @@ body {
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
-.hero .content:hover .cta {
-  background: black;
+.hero .content:hover .cta,
+.events .leftBox .content:hover .cta {
+  background:  rgba(1, 1, 3, 0.39);
   color: wheat;
   transition: 0.5s;
 }
@@ -247,8 +328,17 @@ body {
   gap: 1rem;
 }
 
+.shoes-rating .star-full,
+.shoes .rating .star-full {
+  fill: var(--main);
+}
+
 .rating ion-icon {
-  color: var(--background);
+  color: wheat;
+}
+
+.rating ion-icon:hover {
+  color: var(--main);
 }
 
 .swiper-slide-shadow-right {
@@ -436,12 +526,43 @@ footer .credit {
   justify-content: center;
 }
 
+.shoes .row .shoes-list:hover {
+  background: rgb(236, 207, 213);
+  transition: 0.5s;
+}
+
 .shoes .row .shoes-list {
   text-align: center;
   font-size: 1.5rem;
   padding-bottom: 3rem;
   border: 2px solid var(--main);
   margin: 0.7rem 1.7rem;
+}
+
+.shoes .row .shoes-list .product-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.shoes .row .shoes-list .product-icons a {
+  width: 4rem;
+  height: 4rem;
+  color: var(--background);
+  background-color: var(--main);
+  margin: 0.3rem;
+  border: 1.5px solid var(--main);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shoes .row .shoes-list .product-icons a:hover {
+  background-color: var(--background);
+  color: var(--main);
+  border: 1px solid var(--background);
 }
 
 .shoes .row .shoes-list img {
@@ -460,9 +581,16 @@ footer .credit {
   margin-bottom: 0.7rem;
 }
 
+.shoes .row .shoes-list .rating {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
 /* Events Section */
 .events .leftBox {
-  max-width: 80%;
+  max-width: 90%;
   height: 100%;
   padding: 1rem 2rem;
   box-sizing: border-box;
@@ -477,10 +605,7 @@ footer .credit {
   background: #c59f70;
   padding: 3rem;
   transition: 0.5s;
-}
-
-.events .leftBox .content:hover {
-  background: rgba(1, 1, 3, 0.39);
+  text-align: center;
 }
 
 .events .leftBox .content h2 {
@@ -495,6 +620,14 @@ footer .credit {
   margin: 10px 0 0;
   padding: 0;
   font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.events .leftBox .content a {
+  margin-top: 2rem;
+  color: wheat;
+  font-size: 2rem;
+  border: 1px solid black;
 }
 
 .events .events-row {
@@ -597,7 +730,10 @@ footer .credit {
   text-align: center;
 }
 
-.events .events-row ul li .details h5 {
+.events .events-row ul li .details .date-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   margin-right: 2rem;
   padding: 0;
@@ -608,12 +744,12 @@ footer .credit {
   text-align: center;
 }
 
-.events .events-row ul li .details h5 span {
-  margin: 0;
-  margin-left: 2rem;
+.events .events-row ul li .details .date-time h5,
+.events .events-row ul li .details .date-time h2 {
+  font-size: 1.3rem;
+  font-weight: 450;
+  margin: 0.1rem 2rem;
   padding: 0;
-  font-size: 1.5rem;
-  text-align: center;
 }
 
 .events .events-row ul li .details h6 {
@@ -708,7 +844,9 @@ footer .credit {
   margin: 10% auto;
   padding: 1.3rem;
   border: 1px solid black;
-  width: 80%;
+  width: 90%;
+  max-height: 70vh;
+  overflow-y: auto;
   animation: animateModal 0.5s;
 }
 
@@ -730,21 +868,25 @@ footer .credit {
 }
 
 .modal-content {
-  display: flex;
-  flex-wrap: nowrap;
+  display: block;
+  text-align: center;
 }
 
-.modal-content img {
-  height: 25rem;
-  width: 45%;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
+.modal-content .product-content h1 {
+  color: rgb(136, 86, 12);
+}
+
+.modal-content .product-content h2 {
+  margin-top: 1.3rem;
+  color: rgb(167, 53, 53);
 }
 
 .modal-content p {
+  color: black;
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin-top: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 /* Media Queries */
@@ -811,7 +953,7 @@ footer .credit {
   .navbar .navbar-nav {
     position: absolute;
     top: 102%;
-    right: 0;
+    right: -100%;
     background: linear-gradient(
     to bottom,
     var(--background) 0%,
@@ -820,10 +962,7 @@ footer .credit {
   );
     width: 30rem;
     height: 100vh;
-    z-index: 9999;
-    overflow: hidden;
-    display: none;
-    transition: 0.5s;
+    transition: 0.3s;
   }
 
   .navbar .navbar-nav a {
@@ -833,10 +972,10 @@ footer .credit {
     padding: 0.5rem;
     font-size: 2rem;
     font-weight: 400;
-  }
+  } 
 
   .navbar .navbar-nav.active {
-    display: block;
+    right: 0;
   }
 
   .navbar .navbar-nav a::after {
@@ -845,6 +984,16 @@ footer .credit {
 
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
+  } 
+
+  .navbar .navbar-extra {
+    padding: 0rem 1.8rem;
+    margin-right: 2rem;
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
   }
 
   .about .row {
@@ -879,22 +1028,14 @@ footer .credit {
   }
 
   .modal-content {
+    display: flex;
     flex-wrap: wrap;
-  }
-
-  .modal-content img {
-    margin: auto;
-    width: 55%;
   }
 
   .modal-content h2 {
     margin-top: 1.5rem;
-    text-align: center;
   }
 
-  .modal-content p {
-    text-align: justify;
-  }
 }
 
 /* Mobile devices */
@@ -903,6 +1044,10 @@ footer .credit {
     font-size: 45%;
   }
   
+  body{
+    margin-top: 15rem;
+  }
+
   #tranding .tranding-slider {
     height: 42rem;
   }

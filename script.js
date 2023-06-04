@@ -1,17 +1,43 @@
-//Toggle class active
-const navbarNav = document.querySelector(".navbar-nav");
-//ketika hamburger menu diklik
-document.querySelector("#hamburger-menu").onclick = () => {
-  navbarNav.classList.toggle("active");
-  console.log(navbarNav.classList.contains("active"));
+//Toggle clas active untuk Search Form
+const searchForm = document.querySelector('.search-form');
+const searchBox = document.querySelector('#search-box');
+//ketika search diklik
+document.querySelector('#search-button').onclick = (e) => {
+  searchForm.classList.toggle('active');
+  searchBox.focus();
+  e.preventDefault();
 };
 
-//untuk menghilangkan sidebar tanpa klik hamburger menu
-const hamburger = document.querySelector("#hamburger-menu");
+//Toggle clas active untuk Shopping Cart
+const shoppingCart = document.querySelector('.shopping-cart');
+//ketika search diklik
+document.querySelector('#shopping-cart-button').onclick = (e) => {
+  shoppingCart.classList.toggle('active');
+  e.preventDefault();
+};
+
+//Toggle class active untuk Hamburger Menu
+const navbarNav = document.querySelector('.navbar-nav');
+//ketika hamburger menu diklik
+document.querySelector('#hamburger-menu').onclick = (e) => {
+  navbarNav.classList.toggle('active');
+  e.preventDefault();
+};
+
+//klik diluar elemen
+const hm = document.querySelector('#hamburger-menu');
+const sb= document.querySelector('#search-button');
+const sc= document.querySelector('#shopping-cart-button');
 
 document.addEventListener("click", function (e) {
-  if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+  if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
+  }
+  if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
+    searchForm.classList.remove("active");
+  }
+  if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) {
+    shoppingCart.classList.remove("active");
   }
 });
 
@@ -36,7 +62,8 @@ pagination: {
 },
 });
 
-// Modal Box
+
+// Modal Box - Open andClose
 function openModal(e) {
   const modal = document.getElementById("item-detail-modal");
   modal.style.display = "flex";
@@ -66,14 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
       closeModal();
     });
   }
-
-  window.addEventListener("click", function(event) {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
 });
-
 
 
 //Validation for Subscribe Page

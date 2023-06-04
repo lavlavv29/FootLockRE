@@ -38,13 +38,50 @@
         </div>
 
         <div class="navbar-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
+
+        <!-- Search Form Start -->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box"><i data-feather="search"></i></label>
+        </div>
+        <!-- Search Form End -->
+
+        <!-- Shopping Cart Start -->
+        <div class="shopping-cart">
+            <div class="cart-item">
+                <img src="image/shoes/chelsea.png" alt="Chelsea Boots">
+                <div class="item-detail">
+                    <h3>Product 1</h3>
+                    <div class="item-price">IDR 329.000</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+
+            <div class="cart-item">
+                <img src="image/shoes/oxford.png" alt="Oxford">
+                <div class="item-detail">
+                    <h3>Product 2</h3>
+                    <div class="item-price">IDR 359.000</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+
+            <div class="cart-item">
+                <img src="image/shoes/derby.png" alt="Derby">
+                <div class="item-detail">
+                    <h3>Product 3</h3>
+                    <div class="item-price">IDR 369.000</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+        </div>
+        <!-- Shopping Cart End -->
     </nav>
     <!-- Navbar end -->
-    <div class="info">
-        <h2>Free shipping for purchases over IDR 500,000</h2>
-    </div>
 
     <!-- Hero Section start -->
     <section class="hero" id="home">
@@ -77,13 +114,13 @@
                             <h1 class="shoes-price">Rp329.000</h1>
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="shoes-name">Chelsea</h2>
-                                <h3 class="shoes-rating"><span>4.5</span>
+                                <h3 class="shoes-rating"><span>5</span>
                                     <div class="rating">
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
                                     </div>
                                 </h3>
                             </div>
@@ -100,11 +137,11 @@
                             <h1 class="shoes-price">Rp319.000</h1>
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="shoes-name">Sneakers</h2>
-                                <h3 class="shoes-rating"><span>4.5</span>
+                                <h3 class="shoes-rating"><span>3</span>
                                     <div class="rating">
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
                                         <ion-icon name="star"></ion-icon>
                                         <ion-icon name="star"></ion-icon>
                                     </div>
@@ -123,12 +160,12 @@
                             <h1 class="shoes-price">Rp369.000</h1>
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="shoes-name">Derby</h2>
-                                <h3 class="shoes-rating"><span>4.5</span>
+                                <h3 class="shoes-rating"><span>4</span>
                                     <div class="rating">
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
                                         <ion-icon name="star"></ion-icon>
                                     </div>
                                 </h3>
@@ -146,11 +183,11 @@
                             <h1 class="shoes-price">Rp229.000</h1>
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="shoes-name">Sandals</h2>
-                                <h3 class="shoes-rating"><span>4.5</span>
+                                <h3 class="shoes-rating"><span>3</span>
                                     <div class="rating">
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
                                         <ion-icon name="star"></ion-icon>
                                         <ion-icon name="star"></ion-icon>
                                     </div>
@@ -185,13 +222,13 @@
                             <h1 class="shoes-price">Rp329.000</h1>
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="shoes-name">Chelsea</h2>
-                                <h3 class="shoes-rating"><span>4.5</span>
+                                <h3 class="shoes-rating"><span>5</span>
                                     <div class="rating">
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
                                     </div>
                                 </h3>
                             </div>
@@ -208,11 +245,11 @@
                             <h1 class="shoes-price">Rp319.000</h1>
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="shoes-name">Sneakers</h2>
-                                <h3 class="shoes-rating"><span>4.5</span>
+                                <h3 class="shoes-rating"><span>3</span>
                                     <div class="rating">
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
                                         <ion-icon name="star"></ion-icon>
                                         <ion-icon name="star"></ion-icon>
                                     </div>
@@ -231,12 +268,12 @@
                             <h1 class="shoes-price">Rp369.000</h1>
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="shoes-name">Derby</h2>
-                                <h3 class="shoes-rating"><span>4.5</span>
+                                <h3 class="shoes-rating"><span>4</span>
                                     <div class="rating">
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
                                         <ion-icon name="star"></ion-icon>
                                     </div>
                                 </h3>
@@ -254,11 +291,11 @@
                             <h1 class="shoes-price">Rp229.000</h1>
                             <div class="tranding-slide-content-bottom">
                                 <h2 class="shoes-name">Sandals</h2>
-                                <h3 class="shoes-rating"><span>4.5</span>
+                                <h3 class="shoes-rating"><span>3</span>
                                     <div class="rating">
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
-                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
+                                        <ion-icon name="star" class="star-full"></ion-icon>
                                         <ion-icon name="star"></ion-icon>
                                         <ion-icon name="star"></ion-icon>
                                     </div>
@@ -276,7 +313,7 @@
     </section>
 
 
-    <!-- Swiper Icons -->
+    <!-- Ion Icons -->
     <script
         type="module"
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

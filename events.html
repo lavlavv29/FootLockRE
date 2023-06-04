@@ -30,9 +30,47 @@
         </div>
 
         <div class="navbar-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
 
+        <!-- Search Form Start -->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box"><i data-feather="search"></i></label>
+        </div>
+
+        <!-- Shopping Cart Start -->
+        <div class="shopping-cart">
+            <div class="cart-item">
+                <img src="image/shoes/chelsea.png" alt="Chelsea Boots">
+                <div class="item-detail">
+                    <h3>Product 1</h3>
+                    <div class="item-price">IDR 329.000</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+
+            <div class="cart-item">
+                <img src="image/shoes/oxford.png" alt="Oxford">
+                <div class="item-detail">
+                    <h3>Product 2</h3>
+                    <div class="item-price">IDR 359.000</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+
+            <div class="cart-item">
+                <img src="image/shoes/derby.png" alt="Derby">
+                <div class="item-detail">
+                    <h3>Product 3</h3>
+                    <div class="item-price">IDR 369.000</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+        </div>
+        <!-- Shopping Cart End -->
     </nav>
     <!-- Navbar end -->
 
@@ -47,8 +85,8 @@
         <div class="leftBox">
             <div class="content">
                 <h2>Where can you find us?</h2>
-                <p>Explore our booths at upcoming events and discover the world of craftsmanship through our exquisite handmade leather men's shoes.</p>
-            </div>
+                <p>Explore our booths at upcoming events and visit our offline store to discover the world of craftsmanship through our exquisite handmade leather men's shoes.</p>
+                <a href="#" class="cta" onclick="openModal()">Store Location</a>
         </div>
         <div class="events-row">
             <ul>
@@ -58,7 +96,10 @@
                     </div>
                     <div class="details">
                         <h4>Jakarta Sneakers Day (JSD)</h4>
-                        <h5>24-27 June 2023 <span>||</span> <span>10AM-20PM</span> </h5>
+                        <div class="date-time">
+                            <h5>24-27 June 2023</h5>
+                            <h2>10AM-20PM</h2>
+                        </div>
                         <h6>Hall 1, Indonesia Convention Exhibition (ICE) BSD, Tangerang</h6>
                         <br>
                         <p>Jakarta Sneakers Day is one of the largest sneakers and streetwear exhibitions in Indonesia.
@@ -71,12 +112,15 @@
                     <div style="clear: both;"></div>
                 </li>
                 <li>
-                    <div class="time">
+                    <div class="time"> 
                         <h3>13 <br> <span>July</span> </h3>
                     </div>
                     <div class="details">
                         <h4>Kreative Independent Creative Kommunity (KICK)</h4>
-                        <h5>13-15 July 2023 <span>||</span><span>9AM-22PM</span> </h5>
+                        <div class="date-time">
+                            <h5>13-15 July 2023 </h5>
+                            <h2>9AM-22PM</h2>
+                        </div>
                         <h6>Lapangan Pussenif, Bandung</h6>
                         <br>
                         <p>The Kreative Independent Creative which consists of entrepreneurs in Bandung, began anuual events since 2006.
@@ -93,7 +137,10 @@
                     </div>
                     <div class="details">
                         <h4>Pasar Nusantara</h4>
-                        <h5>11-21 August 2023 <span>||</span><span>11AM-22PM</span></h5>
+                        <div class="date-time">
+                            <h5>11-21 August 2023</h5>
+                            <h2>11AM-22PM</h2>
+                        </div>
                         <h6>Ground Floor, Pondok Indah Mall 1, South Jakarta</h6>
                         <br>
                         <p>In order to celebrate the 77th anniversary of the Independence of the Republic of Indonesia, PIM is again presenting the Nusantara Market 
@@ -129,6 +176,62 @@
             <p>Copyright &copy; 2023. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Modal Box Item Detail -->
+    <div class="modal" id="item-detail-modal">
+        <div class="modal-container">
+            <a href="#" class="close-icon" onclick="closeModal()"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <div class="product-content">
+                    <h1>- BANDUNG -</h1>
+                    <h2>23 PASKAL SHOPPING CENTER</h2>
+                    <p>23 PASKAL SHOPPING CENTER Lt. 1 - Jl. Pasir Kaliki No. 25-27
+                        <br>(022) 97062845
+                    </p>
+                    <h2>PARIS VAN JAVA MALL</h2>
+                    <p>Jl. Sukajadi No. 131-139
+                        <br>(021) 12095697
+                    </p>
+                    
+                    <h1>- JAKARTA </h1>
+                    <h2>CENTRAL PARK</h2>
+                    <p>CENTRAL PARK MALL Lt. 1 - Jl. Letjen S. Parman No.28, RT.12/RW.6, Tj. Duren Sel., Grogol Petamburan, Kota Jakarta Barat
+                        <br>(021) 21001059
+                    </p>
+                    <h2>PIK AVENUE</h2>
+                    <p>PIK AVENUE Lt. 2 - Jl. Pantai Indah Kapuk, RT.6/RW.2, Kamal Muara, Penjaringan, Kota Jakarta Utara
+                        <br>(021) 22571227
+                    </p>
+                    <h2>TAMAN ANGGREK MALL</h2>
+                    <p>TAMAN ANGGREK MALL Lt. GF - Jl. Letjen S. Parman No.28, RT.9/RW.1, Tomang, Grogol Petamburan, Kota Jakarta Barat
+                        <br>(021) 5659242
+                    </p>
+                    <h2>GRAND INDONESIA</h2>
+                    <p>Jl. MH Thamrin No.1, Jakarta Pusat
+                        <br>(021) 23981251
+                    </p>
+
+                    <h1>- BOGOR -</h1>
+                    <h2>AEON MALL SENTUL CITY</h2>
+                    <p>AEON Mall Sentul, Lt. 1 - JL. MH. Thamrin, Citaringgul, Kec. Babakan Madang
+                        <br>(021) 87765914
+                    </p>
+                    
+                    <h1>- YOGYAKARTA -</h1>
+                    <h2>MALIOBORO MALL</h2>
+                    <p>MALIOBORO MALL Lt. 2 - Jl. Malioboro 52-58, Yogyakarta
+                        <br>(021) 57973210
+                    </p>
+
+                    <h1>- SURABAYA -</h1>
+                    <h2>GALAXY MALL SURABAYA</h2>
+                    <p>GALAXY MALL Lt. 1 - Jl. Dharmahusada Indah Timur No.35-37, Mulyorejo, Surabaya
+                        <br>(031) 5956382
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Feather Icons -->
     <script>
