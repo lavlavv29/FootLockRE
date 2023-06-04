@@ -1,30 +1,30 @@
-//Toggle clas active untuk Search Form
+//Toggle clas active for Search Form
 const searchForm = document.querySelector('.search-form');
 const searchBox = document.querySelector('#search-box');
-//ketika search diklik
+//when search is clicked
 document.querySelector('#search-button').onclick = (e) => {
   searchForm.classList.toggle('active');
   searchBox.focus();
   e.preventDefault();
 };
 
-//Toggle clas active untuk Shopping Cart
+//Toggle clas active for Shopping Cart
 const shoppingCart = document.querySelector('.shopping-cart');
-//ketika search diklik
+//when shopping cart is clicked
 document.querySelector('#shopping-cart-button').onclick = (e) => {
   shoppingCart.classList.toggle('active');
   e.preventDefault();
 };
 
-//Toggle class active untuk Hamburger Menu
+//Toggle class active for Hamburger Menu
 const navbarNav = document.querySelector('.navbar-nav');
-//ketika hamburger menu diklik
+//when hamburger menu is clicked
 document.querySelector('#hamburger-menu').onclick = (e) => {
   navbarNav.classList.toggle('active');
   e.preventDefault();
 };
 
-//klik diluar elemen
+//click outside of element
 const hm = document.querySelector('#hamburger-menu');
 const sb= document.querySelector('#search-button');
 const sc= document.querySelector('#shopping-cart-button');
@@ -63,7 +63,7 @@ pagination: {
 });
 
 
-// Modal Box - Open andClose
+// Modal Box - Open and Close
 function openModal(e) {
   const modal = document.getElementById("item-detail-modal");
   modal.style.display = "flex";
@@ -104,24 +104,24 @@ function validateForm() {
   var country = document.getElementById("country").value;
   var checkbox = document.getElementById("checkbox").checked;
 
-  // Validasi kosong
+  // Validation empty
   if (username == "") {
     alert("Username cannot be empty");
   }
 
-  // Validasi email -> akhirnya harus @gmail.com
+  // Validation email -> must end with @gmail.com
   else if (!email.endsWith("@gmail.com")) {
     alert("Email must end with @gmail.com");
   }
-  // Validasi phone -> harus dimulai dari 0
+  // Validation phone -> must start with 0
   else if (phone.charAt(0) != 0) {
     alert("Phone number must start with '0'");
   }
-  // Validasi dropdown
+  // Validation dropdown
   else if (country == "empty") {
     alert("Country can't be empty");
   }
-  // Validasi checkbox
+  // Validation checkbox
   else if (!checkbox) {
     alert("Terms and conditions must be agreed to");
   } else {
